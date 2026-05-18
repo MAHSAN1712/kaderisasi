@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaderisasi Dashboard</title>
+  <link rel="stylesheet" href="css/css.css">
+  <!-- My Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+     <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="dark">
+
+<!-- LOGIN PAGE -->
+<div id="loginPage" class="center">
+  <h2>Login Kaderisasi</h2>
+  <input type="text" id="username" placeholder="Username"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+  <button onclick="login()">Login</button>
+</div>
+<!-- TOGGLE DARK MODE -->
+<button class="toggle" onclick="toggleMode()">🌙/☀️</button>
+<!-- MAIN DASHBOARD -->
+<div id="dashboard" class="hidden">
+
+<aside class="sidebar">
+    <ul>
+      <li onclick="showSection('home')">Kegiatan</li>
+      <li onclick="showSection('timeline')">Timeline</li>
+      <li onclick="showSection('evaluasi')">Evaluasi</li>
+    </ul>
+</aside>
+
+  <main>
+    <!-- HOME -->
+      <section id="home">
+      <h1>Dashboard Kaderisasi</h1>
+      <div class="card-container">
+
+        <div class="card">
+          <img src="../WhatsApp Image 2026-02-07 at 22.27.13 (1).jpeg" alt="foto">
+          <h3>Panggilan 1</h3>
+          <p>Pelatihan dasar kaderisasi.</p>
+          <h5><a href="#">Kebutuhan Massa</a></h5>
+          <a href="https://drive.google.com/drive/folders/FOLDER2" target="_blank">
+            <button>Dokumentasi</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <img src="/WhatsApp Image 2026-02-07 at 22.27.13 (2).jpeg" alt="foto">
+          <h3>Panggilan 2</h3>
+          <p>Workshop kepemimpinan.</p>
+          <h5><a href="#">Kebutuhan Massa</a></h5>
+          <a href="https://drive.google.com/drive/folders/FOLDER2" target="_blank">
+            <button>Dokumentasi</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <img src="/WhatsApp Image 2026-02-07 at 22.30.18 (4).jpeg" alt="foto">
+          <h3>Panggilan 3</h3>
+          <p>Evaluasi dan monitoring.</p>
+          <h5><a href="#">Kebutuhan Massa</a></h5>
+          <a href="https://drive.google.com/drive/folders/FOLDER2" target="_blank">
+            <button>Dokumentasi</button>
+          </a>
+        </div>
+
+      </div>
+    </section>
+    
+    <!-- TIMELINE STYLE CALENDAR -->
+<section id="timeline" class="hidden">
+  <h2>Kalender Kegiatan</h2>
+  <div id="calendar" class="calendar"></div>
+</section>
+    <!-- EVALUASI -->
+    <section id="evaluasi" class="hidden">
+      <h2>Evaluasi Kader</h2>
+      <iframe src="https://docs.google.com/forms/d/e/FORM_EVALUASI/viewform?embedded=true" 
+              width="100%" height="500"></iframe>
+    </section>
+
+  </main>
+  <!-- Footer -->
+    <footer>
+      <div class="links">
+        <button onclick="logout()" class="button">Logout</button>
+      </div>
+<!-- Footer End -->
+</div>
+
+<script src="js/js.js"></script>
+</body>
+</html>
